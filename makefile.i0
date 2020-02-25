@@ -1,0 +1,6 @@
+CC        =  cc
+CCFLAGS   = -O2 -DIEEE
+INCLUDE   =
+INCLUDE   = -I /usr/local/mpi/include
+MPILIB    =  -L/usr/local/mpi/lib/IRIX/ch_shmem -lmpi
+

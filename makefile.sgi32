@@ -1,0 +1,17 @@
+KEYWORD=-DIEEE -DSGI
+#UNI
+FCU = f90
+CCU = cc
+FFLAGSU=-O3 -n32 -extend_source $(KEYWORD) -DUNI
+CFLAGSU=-O3 -n32 $(KEYWORD) -DUNI
+COMMONLIBU=-lblas
+ 
+#Parallel..............
+INCLUDE=
+MPILIB=-lmpi
+FC=f90
+CC = cc
+FFLAGS=-O3 -n32 -extend_source $(KEYWORD) $(INCLUDE)
+CFLAGS=-O3 -n32 $(KEYWORD) $(INCLUDE)
+COMMONLIB=-lblas $(MPILIB)
+
