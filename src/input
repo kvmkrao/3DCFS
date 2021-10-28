@@ -1,0 +1,136 @@
+title AirIntake-Matrix-Method
+
+# size and dimensions
+nn 287375
+ne 56488
+
+nsd 3
+nen 6
+ndof 5
+ndof_t 1
+nrng 7
+iquad 2
+
+# time and steps
+dt 1e-05
+nts 1000
+nslices 5
+nitbref 1
+nit 2
+nsrest 2
+nsolution 5
+ntstart 1
+idisk   00
+# thermodynamic quantities
+viscosity 3.0e-06
+density 1.0
+mach_num 3.0
+alpha 1.0
+flag_he 3
+ShockCapFactor 0.25
+WallTemp 1.50
+BackPresInitial 9.0
+BackPresFinal 9.00
+shock_cap
+Sutherland_Law
+AdiabaticWall
+#ApplyBackPressure
+#ApplyBleed
+turbulent
+turb_model spalart
+
+#;;boundary condition
+noslip 1
+ufree 2
+allfixed 3
+wfix 4
+ufree 5
+wfix 6
+wfix 7
+
+formatted
+gmres
+block_diag
+#diag
+
+#;;GMRES parameters
+numcl 750
+ngmr 20
+ikg 20
+epsgm -1.00e-4
+epsrt -1.00e-4
+# following are copied from the input file of narain's solver 
+eps 1 1.0e-15
+eps 2 1.0e-15
+
+inner      20
+outer      1
+iscaling   1
+iprecond   1
+iscaling   1
+iprecond   1
+isolver    1
+
+timing on
+restart on
+sptime  off
+
+debug off
+
+#------------PATH_FOR_MESH_DATA----------------
+PATH-mang
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/mang
+PATH-msang
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/mslipang
+PATH-mxyz
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/mxyz_bi
+PATH-mien
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/mien_bi
+PATH-mrng
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/mrng
+PATH-myl
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/myl
+PATH-transdist
+/home/muralik/Intake_quad_3d/AI_14TA_6%bleed/mesh/5sliceszp05/tdist
+#PATH-mwallnode
+#/home/vijayp/muralik/turb_trip/mesh/nsliceszp12/mwallnode
+#PATH-transnodes
+#/home/vijayp/muralik/turb_trip/mesh/nsliceszp12/tnodes
+#PATH-transelem
+#/home/vijayp/muralik/turb_trip/mesh/nsliceszp12/telems
+
+probe
+30
+ 132324
+ 134364
+ 121141
+ 147569
+ 120190
+ 120975
+ 143271
+ 120876
+ 145836
+ 146300
+ 117593
+ 140996
+ 134524
+ 138780
+ 140039
+ 119924
+ 119301
+ 119247
+ 119913
+ 115250
+ 168914
+ 171538
+ 170666
+ 169832
+ 169116
+ 170838
+ 169451
+ 169782
+ 172318
+ 167225
+
+# signalling the end of file
+done
