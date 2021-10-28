@@ -1,5 +1,0 @@
-#include </usr/local/mpich-1.2.1..7b-gnu/include/mpi.h>
-/*
-#include </usr/local/mpi/include/mpi.h>
-#include <mpi.h>
-*/

@@ -1,6 +1,0 @@
-CC        =  mpcc
-CCFLAGS   = -O2 -DIEEE
-INCLUDE   =
-MPILIB    =  -lmpi
-
-

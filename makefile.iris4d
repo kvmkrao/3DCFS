@@ -1,6 +1,0 @@
-CC        =  cc
-CCFLAGS   = -O2 -DIEEE -n32
-INCLUDE   =
-MPILIB    =  -lmpi
-
-
